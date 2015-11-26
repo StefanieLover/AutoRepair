@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <base href="/">
+<meta charset="UTF-8">
+<title>AutoRepair</title>
+    <!--third libs-->
+    <!--<script type="text/javascript" src="js/angularjs/angular.js"></script>-->
+    <!--<script type="text/javascript" src="js/angularjs/angular.min.js"></script>-->
+    <!--<script type="text/javascript" src="js/angularjs/angular-animate.js"></script>-->
+    <!--<script type="text/javascript" src="js/angularjs/angular-animate.min.js"></script>-->
+    <!--<script type="text/javascript" src="js/angularjs/angular-ui-router.js"></script>-->
+    <!--<script type="text/javascript" src="js/angularjs/angular-ui-router.min.js"></script>-->
+    <!--<script type="text/javascript" src="js/jQuery/jquery-1.9.1.js"></script>-->
+    <!--<script type="text/javascript" src="js/jQuery/jquery-1.9.1.min.js"></script>-->
+    <script type="text/javascript" src="/js/requirejs/require.js" data-main='main.js'></script>
+
+    <!--js-->
+    <!--<script type="text/javascript" src="app/controller/MainController.js"></script>-->
+</head>
+<body ng-controller="MainController">
+	<p ng-bind="'Label' | translate"></p>
+    <!--header-->
+    <div ui-view="header"></div>
+    <!--body-->
+    <div ui-view="body"></div>
+</body>
+</html>
