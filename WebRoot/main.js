@@ -10,7 +10,7 @@ require.config({
         "static-file":"js/angularjs/angular-translate-loader-static-files.min",
         "i18nService":"app/i18n/i18nService",
         "lazyload":"js/lazyload/lazyload",
-        "fmRouter":"app/framwork/framworkRouter",
+        "fmRouter":"app/framework/framworkRouter",
         "debRouter":"app/dev/config/autorepairRouter"
     },
     //这个配置是你在引入依赖的时候的包名
@@ -37,6 +37,6 @@ require.config({
     }
 });
 
-require(["app/app","app/framwork/controller/MainController"], function (app, ctrl) {
+require(["app/app","app/framework/controller/MainController"], function (app, ctrl) {
     angular.bootstrap(document,[app.name]);
 });

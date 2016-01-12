@@ -24,6 +24,31 @@
     <mvc:resources location="/app/" mapping="/app/**" cache-period="0"/>
     <mvc:resources location="main.js" mapping="main.js" cache-period="0"/>
     
+    <!-- 获取配置文件 -->
+	<bean id="config"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath:db-config.properties</value>
+			</list>
+		</property>
+	</bean>
+	<!-- 获取数据源 -->
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName">
+			<value>${db.dirverClass}</value>
+		</property>
+		<property name="url">
+			<value>${db.url}</value>
+		</property>
+		<property name="username">
+			<value>${db.username}</value>
+		</property>
+		<property name="password">
+			<value>${db.password}</value>
+		</property>
+	</bean>
+    
     <!-- 首页 -->
     <mvc:view-controller path="/" view-name="index" />
     <mvc:resources location="/index.html" mapping="/index.html" cache-period="0" />

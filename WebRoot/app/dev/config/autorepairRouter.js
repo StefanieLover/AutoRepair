@@ -5,7 +5,7 @@ define(["lazyload"], function (lazyloadModule) {
         url: "/AutoRepair",
         views: {
             header: {
-                templateUrl: 'app/dev/views/test.html'
+                templateUrl: 'app/framework/views/head.html'
             },
             body: {
                 template: '<div ui-view></div>'
@@ -20,4 +20,6 @@ define(["lazyload"], function (lazyloadModule) {
     devModule = lazyloadModule.makeLazy(devModule);
     devModule.stateConfig({stateConfig: configArr});
     return devModule;
+    //2016-01-11T12:36:41.450969Z 1 [Note]
+    //s generated for root@localhost: 0MhoktYwtc%j
 });
