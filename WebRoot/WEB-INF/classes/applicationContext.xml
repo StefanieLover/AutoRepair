@@ -11,7 +11,9 @@
     http://www.springframework.org/schema/task
     http://www.springframework.org/schema/task/spring-task-3.1.xsd
     http://www.springframework.org/schema/context 
-    http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+    http://www.springframework.org/schema/context/spring-context-3.1.xsd
+    http://www.springframework.org/schema/tx 
+    http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
 
 	<task:annotation-driven />
 	<mvc:annotation-driven />
@@ -42,19 +44,20 @@
 		</property>
 	</bean>
 	<!-- 获取数据源 -->
-	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
-		<property name="driverClassName">
-			<value>${db.dirverClass}</value>
-		</property>
-		<property name="url">
-			<value>${db.url}</value>
-		</property>
-		<property name="username">
-			<value>${db.username}</value>
-		</property>
-		<property name="password">
-			<value>${db.password}</value>
-		</property>
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+		<property name="driverClass"><value>${datasource.dirverClass}</value></property>
+		<property name="jdbcUrl"><value>${datasource.url}</value></property>
+		<property name="user"><value>${datasource.username}</value></property>
+		<property name="password"><value>${datasource.password}</value></property>
+		
+		<property name="initialPoolSize"><value>${datasource.initialPoolSize}</value></property>
+		<property name="maxPoolSize"><value>${datasource.maxPoolSize}</value></property>
+		<property name="minPoolSize"><value>${datasource.minPoolSize}</value></property>
+		<property name="maxIdleTime"><value>${datasource.maxIdleTime}</value></property>
+		<property name="acquireIncrement"><value>${datasource.acquireIncrement}</value></property>
+		<property name="acquireRetryAttempts"><value>${datasource.acquireRetryAttempts}</value></property>
+		<property name="acquireRetryDelay"><value>${datasource.acquireRetryDelay}</value></property>
+		<property name="idleConnectionTestPeriod"><value>${datasource.idleConnectionTestPeriod}</value></property>
 	</bean>
 
 	<bean id="sessionFactory"
@@ -63,8 +66,7 @@
 		<property name="hibernateProperties">
 			<props>
 				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
-				<prop key="hibernate.hbm2ddl.auto">${db.hbm2ddl.auto}</prop>
-				<prop key="hibernate.hbm2ddl.auto">create</prop>
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
 			</props>
 		</property>
 		<property name="packagesToScan">
@@ -82,7 +84,7 @@
 	<!-- <bean id="commonDao" class="com.mvc.dao.EntityDaoImpl">
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean> -->
-	<!-- <tx:annotation-driven transaction-manager="transactionManager" /> -->
+	<tx:annotation-driven transaction-manager="transactionManager" />
 
 	<!-- 首页 -->
 	<mvc:view-controller path="/" view-name="index" />
