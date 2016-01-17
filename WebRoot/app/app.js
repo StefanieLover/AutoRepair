@@ -5,11 +5,13 @@ define(["angular",
     "i18nService",
     "ui-router",
     "fmRouter",
-    "debRouter"], function (angular, i18nService, router, fmRouter, debRouter) {
+    "debRouter",
+    "app/framework/service/HttpService"], function (angular, i18nService, router, fmRouter, debRouter, HttpService) {
     "use strict";
     var dependence = ['pascalprecht.translate', 'ngCookies', 'ui.router', fmRouter.name, debRouter.name];
     var app = angular.module('autoRepair', dependence);
     app.service('i18nService', i18nService);
+    app.service('HttpService', HttpService);
     app.factory('$translateCookieStorage', i18nService);
     app.config(['$translateProvider', function ($translateProvider) {
         // 设置策略

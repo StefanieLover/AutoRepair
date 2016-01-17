@@ -2,7 +2,7 @@ define(["ui-router"], function (router) {
     "use strict";
     var config = ["$stateProvider", "$urlRouterProvider", "$locationProvider",
         function ($stateProvider, $urlRouterProvider, $locationProvider) {
-            $urlRouterProvider.otherwise("/");
+            $urlRouterProvider.otherwise("/home");
             $locationProvider.html5Mode(true);
     }];
 

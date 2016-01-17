@@ -1,0 +1,17 @@
+.top-bar{
+  text-align: left;
+    padding: 5px 0;
+    background-color: #584b4f;
+    color: #efeae1;
+    font-size: 14px;
+    height: 43px;
+}
+.top-bar .navigation {
+    display: inline-block;
+}
+.navigation li {
+    display: inline-block;
+    padding-right: 5px;
+    height: 33px;
+    vertical-align: top;
+}

@@ -12,6 +12,14 @@ define(["lazyload"], function (lazyloadModule) {
             }
         }
     }, {
+        name: "home",
+        url: "/home",
+        templateUrl: "app/dev/views/test.html",
+        controller: 'homeCtrl',
+        scripts: {
+          controllers: ["app/dev/controllers/home/homeCtrl"]
+        }
+    }, {
         name: "AutoRepair.other",
         url: "/other",
         templateUrl: "app/dev/views/test.html"
@@ -20,6 +28,4 @@ define(["lazyload"], function (lazyloadModule) {
     devModule = lazyloadModule.makeLazy(devModule);
     devModule.stateConfig({stateConfig: configArr});
     return devModule;
-    //2016-01-11T12:36:41.450969Z 1 [Note]
-    //s generated for root@localhost: 0MhoktYwtc%j
 });
