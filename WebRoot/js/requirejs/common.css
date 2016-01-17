@@ -31,3 +31,6 @@
     color: #81c08b;
     text-decoration: none;
 }
+.top-bar a:focus {
+    color: #a29f99;
+}
