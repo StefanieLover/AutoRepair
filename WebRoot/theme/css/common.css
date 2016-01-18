@@ -1,17 +1,37 @@
+.body{
+    margin: 0;
+    font-family: '微软雅黑';
+}
 .top-bar{
-  text-align: left;
+    text-align: left;
     padding: 5px 0;
     background-color: #584b4f;
     color: #efeae1;
-    font-size: 14px;
-    height: 43px;
+    font-size: 16px;
+    height: 48px;
 }
 .top-bar .navigation {
     display: inline-block;
+    margin-left: 13%
+}
+.top-bar .wrapper{
+    margin: 0 auto;
+    width: 888px;
 }
 .navigation li {
     display: inline-block;
     padding-right: 5px;
-    height: 33px;
     vertical-align: top;
+    margin-left: 20px;
+}
+.top-bar a {
+    color: #efeae1;
+    text-decoration: none;
+}
+.top-bar a:hover {
+    color: #81c08b;
+    text-decoration: none;
+}
+.top-bar a:focus {
+    color: #a29f99;
 }

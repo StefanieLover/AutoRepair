@@ -23,16 +23,11 @@
 	<bean
 		class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter" />
 
-	<mvc:resources location="/js/" mapping="/js/**"
-		cache-period="0" />
-	<mvc:resources location="/css/" mapping="/css/**"
-		cache-period="0" />
-	<mvc:resources location="/images/" mapping="/images/**"
-		cache-period="0" />
-	<mvc:resources location="/app/" mapping="/app/**"
-		cache-period="0" />
-	<mvc:resources location="main.js" mapping="main.js"
-		cache-period="0" />
+	<mvc:resources location="/js/" mapping="/js/**" cache-period="0" />
+	<mvc:resources location="/theme/css/" mapping="/theme/css/**" cache-period="0" />
+	<mvc:resources location="/theme/images/" mapping="/theme/images/**" cache-period="0" />
+	<mvc:resources location="/app/" mapping="/app/**" cache-period="0" />
+	<mvc:resources location="main.js" mapping="main.js" cache-period="0" />
 
 	<!-- 获取配置文件 -->
 	<bean id="config"

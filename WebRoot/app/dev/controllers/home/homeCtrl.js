@@ -1,8 +1,8 @@
 define([], function(){
   "use strict";
   var config = ["$scope", function($scope){
-
+    console.info('........');
   }];
-  var devModule = angular.module("devModule", []);
-  devModule.service('homeCtrl', config);
+  var devModule = angular.module(MODULE_NAME);
+  devModule.controller('homeCtrl', config);
 });

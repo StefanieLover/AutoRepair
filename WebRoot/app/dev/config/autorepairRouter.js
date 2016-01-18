@@ -2,7 +2,7 @@ define(["lazyload"], function (lazyloadModule) {
     "use strict";
     var configArr = [{
         name: "AutoRepair",
-        url: "/",
+        url: "/AutoRepair",
         views: {
             header: {
                 templateUrl: 'app/framework/views/head.html'
@@ -12,7 +12,7 @@ define(["lazyload"], function (lazyloadModule) {
             }
         }
     }, {
-        name: "home",
+        name: "AutoRepair.home",
         url: "/home",
         templateUrl: "app/dev/views/test.html",
         controller: 'homeCtrl',

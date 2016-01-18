@@ -10,6 +10,7 @@ define(["angular",
     "use strict";
     var dependence = ['pascalprecht.translate', 'ngCookies', 'ui.router', fmRouter.name, debRouter.name];
     var app = angular.module('autoRepair', dependence);
+    window.MODULE_NAME = debRouter.name;
     app.service('i18nService', i18nService);
     app.service('HttpService', HttpService);
     app.factory('$translateCookieStorage', i18nService);

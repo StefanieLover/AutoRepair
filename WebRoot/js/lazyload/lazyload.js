@@ -80,11 +80,11 @@ define(["ui-router"], function (router) {
         stateConfig.resolve = stateConfig.resolve || {};
         stateConfig.resolve.deps = function ($q, $rootScope) {
             return $q.all([
-                laod(stateConfig.scripts['directives'] || null),
-                laod(stateConfig.scripts['controllers'] || null),
-                laod(stateConfig.scripts['services'] || null),
-                laod(stateConfig.scripts['factories'] || null),
-                laod(stateConfig.scripts['js'] || null)
+                load(stateConfig.scripts['directives'] || null),
+                load(stateConfig.scripts['controllers'] || null),
+                load(stateConfig.scripts['services'] || null),
+                load(stateConfig.scripts['factories'] || null),
+                load(stateConfig.scripts['js'] || null)
             ]);
             function load(url){
                 var deferred = $q.defer();

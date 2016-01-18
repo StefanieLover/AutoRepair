@@ -22,19 +22,19 @@ public class Customer implements Serializable{
 	@Id
 	@GeneratedValue(generator = "system-uuid")
 	@GenericGenerator(name = "system-uuid", strategy = "uuid")
-	@Column(name="id", columnDefinition="varchar2(100 char)", insertable=true, updatable=true, nullable=false)
+	@Column(name="id", columnDefinition="varchar(100)", insertable=true, updatable=true, nullable=false)
 	private String id;
 	
-	@Column(name="name", columnDefinition="varchar2(50 char)", insertable=true, updatable=true)
+	@Column(name="name", columnDefinition="varchar(50)", insertable=true, updatable=true)
 	private String name;
 	
-	@Column(name="carCardNumber", columnDefinition="varchar2(50 char)", insertable=true, updatable=true)
+	@Column(name="carCardNumber", columnDefinition="varchar(50)", insertable=true, updatable=true)
 	private String carCardNumber;
 	
-	@Column(name="carType", columnDefinition="varchar2(50 char)", insertable=true, updatable=true)
+	@Column(name="carType", columnDefinition="varchar(50)", insertable=true, updatable=true)
 	private String carType;
 	
-	@Column(name="phoneNumber", columnDefinition="varchar2(50 char)", insertable=true, updatable=true)
+	@Column(name="phoneNumber", columnDefinition="varchar(50)", insertable=true, updatable=true)
 	private String phoneNumber;
 	
 }
