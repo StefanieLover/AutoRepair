@@ -1,6 +1,11 @@
+*{
+    -webkit-box-sizing: initial;
+    -moz-box-sizing: initial;
+    box-sizing: initial;
+}
 .body{
     margin: 0;
-    font-family: '微软雅黑';
+    font-family: "Helvetica Neue", Helvetica, arial, freesans, clean, sans-serif;
 }
 .top-bar{
     text-align: left;
@@ -15,7 +20,7 @@
     margin-left: 13%
 }
 .top-bar .wrapper{
-    margin: 0 auto;
+    margin: 12px auto;
     width: 888px;
 }
 .navigation li {

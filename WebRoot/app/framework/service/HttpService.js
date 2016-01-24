@@ -10,6 +10,7 @@ define([], function () {
                     headers: {},
                     cache: false,
                     contentType: "application/x-www-form-urlencoded; chartset='UTF-8'",
+                    data: params,
                     success: function (data) {
                         resolve(data);
                     },
@@ -33,4 +34,5 @@ define([], function () {
             }, params);
         };
     }];
+    return config;
 });

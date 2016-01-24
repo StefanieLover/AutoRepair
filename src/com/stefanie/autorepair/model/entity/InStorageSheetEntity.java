@@ -7,14 +7,16 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "t_employee")
-public class Employee implements Serializable{
+@Table(name = "t_supplier")
+public class InStorageSheetEntity implements Serializable{
 
 	/**
-	 * 员工Entity
+	 * 入库单表体
 	 */
 	private static final long serialVersionUID = 1L;
 	
@@ -23,9 +25,7 @@ public class Employee implements Serializable{
 	@Column(name="id", columnDefinition="varchar(100)", insertable=true, updatable=true, nullable=false)
 	private Integer id;
 	
-	@Column(name="name", columnDefinition="varchar(50)", insertable=true, updatable=true)
-	private String name;
-	
-	@Column(name="phoneNumber", columnDefinition="varchar(50)", insertable=true, updatable=true)
-	private String phoneNumber;
+	@JoinColumn(name = "sheetId", referencedColumnName = "id", nullable = false, updatable=true)
+    @ManyToOne(optional = false, targetEntity = InStorageSheet.class)
+    private InStorageSheet sheetId;
 }
