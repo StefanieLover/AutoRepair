@@ -28,7 +28,31 @@
 	<mvc:resources location="/theme/images/" mapping="/theme/images/**" cache-period="0" />
 	<mvc:resources location="/app/" mapping="/app/**" cache-period="0" />
 	<mvc:resources location="main.js" mapping="main.js" cache-period="0" />
-
+	
+	<!--JSON转换 -->
+	<bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
+		<property name="messageConverters">
+			<list>
+				<bean class="org.springframework.http.converter.ByteArrayHttpMessageConverter"/>
+				<bean class="org.springframework.http.converter.StringHttpMessageConverter">
+					<property name="supportedMediaTypes">
+						<list>
+							<value>text/html;chartset=UTF-8</value>
+							<value>application/json;chartset=UTF-8</value>
+						</list>
+					</property>
+				</bean>
+				<bean class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter">
+					<property name="supportedMediaTypes">
+						<list>
+							<value>application/json;chartset=UTF-8</value>
+						</list>
+					</property>
+				</bean>
+			</list>
+		</property>
+	</bean>
+	
 	<!-- 获取配置文件 -->
 	<bean id="config"
 		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
