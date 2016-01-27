@@ -20,7 +20,7 @@ public class InStorageSheet implements Serializable{
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name="id", columnDefinition="varchar(100)", insertable=true, updatable=true, nullable=false)
+	@Column(name="id", columnDefinition="BIGINT(50)", insertable=true, updatable=true, nullable=false)
 	private Integer id;
 	
 	@Column(name="name", columnDefinition="varchar(50)", insertable=true, updatable=true)
@@ -29,6 +29,5 @@ public class InStorageSheet implements Serializable{
 	@Column(name="supplierId", columnDefinition="varchar(50)", insertable=true, updatable=true)
 	private String supplierId;
 	
-//	@Column(name="supplierId", columnDefinition="varchar2(50 char)", insertable=true, updatable=true)
-//	private String inDate;
+	
 }

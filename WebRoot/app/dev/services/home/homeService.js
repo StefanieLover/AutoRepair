@@ -4,6 +4,9 @@ define([], function(){
         return {
             getAllRepairSheets: function(params){
                 return HttpService.post('/repairSheet/getAllRepairSheets', params);
+            },
+            saveOrUpdateCustomer: function (params) {
+                return HttpService.post('/customer/saveRepairSheet', params);
             }
         }
     }];

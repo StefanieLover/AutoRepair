@@ -15,7 +15,7 @@ import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class commonDao extends HibernateDaoSupport {
+public class CommonDao extends HibernateDaoSupport {
 
 	@SuppressWarnings("rawtypes")
 	public List querySqlToList(final String sql, final Map<String, NullableType> scalars, final Integer index,

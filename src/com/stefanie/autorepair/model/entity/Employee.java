@@ -20,7 +20,7 @@ public class Employee implements Serializable{
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name="id", columnDefinition="varchar(100)", insertable=true, updatable=true, nullable=false)
+	@Column(name="id", columnDefinition="BIGINT(50)", insertable=true, updatable=true, nullable=false)
 	private Integer id;
 	
 	@Column(name="name", columnDefinition="varchar(50)", insertable=true, updatable=true)

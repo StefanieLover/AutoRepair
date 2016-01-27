@@ -1,0 +1,20 @@
+package com.stefanie.autorepair.controller;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.stefanie.autorepair.model.entity.Customer;
+
+@Controller
+@RequestMapping("customer")
+public class CustomerCtrl {
+	
+	@ResponseBody
+	@RequestMapping("saveRepairSheet")
+	public Object saveRepairSheet(HttpServletRequest request){
+		return Customer.saveOrUpdate(request);
+	}
+}

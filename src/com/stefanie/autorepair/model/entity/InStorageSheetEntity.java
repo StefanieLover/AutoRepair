@@ -22,7 +22,7 @@ public class InStorageSheetEntity implements Serializable{
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name="id", columnDefinition="varchar(100)", insertable=true, updatable=true, nullable=false)
+	@Column(name="id", columnDefinition="BIGINT(50)", insertable=true, updatable=true, nullable=false)
 	private Integer id;
 	
 	@JoinColumn(name = "sheetId", referencedColumnName = "id", nullable = false, updatable=true)
