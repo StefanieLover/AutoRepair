@@ -3,5 +3,7 @@
   "repairSheet": "Repair Sheet",
   "storageMange": "Storage Manage",
   "finance": "Finance",
-  "employee": "People List"
+  "peopleList": "People List",
+  "customer": "Customer",
+  "supplier": "Supplier"
 }

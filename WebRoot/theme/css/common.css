@@ -23,11 +23,12 @@
     margin: 12px auto;
     width: 888px;
 }
-.navigation li {
+li {
     display: inline-block;
     padding-right: 5px;
     vertical-align: top;
     margin-left: 20px;
+    cursor: pointer;
 }
 .top-bar a {
     color: #efeae1;
@@ -38,5 +39,8 @@
     text-decoration: none;
 }
 .top-bar a:focus {
-    color: #a29f99;
+    color: #81c08b;
+}
+a:active{
+    color: #81c08b;
 }
