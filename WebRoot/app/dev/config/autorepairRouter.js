@@ -29,6 +29,22 @@ define(["lazyload"], function (lazyloadModule) {
             controllers: ["app/dev/controllers/repairSheet/repairSheetCtrl"]
         }
     }, {
+        name: "AutoRepair.storageMange",
+        url: "/storageMange",
+        templateUrl: "app/dev/views/storageManage/storageManage.html",
+        controller: 'storageManageCtrl',
+        scripts: {
+            controllers: ["app/dev/controllers/storageManage/storageManageCtrl"]
+        }
+    }, {
+        name: "AutoRepair.finance",
+        url: "/finance",
+        templateUrl: "app/dev/views/finance/finance.html",
+        controller: 'financeCtrl',
+        scripts: {
+            controllers: ["app/dev/controllers/finance/financeCtrl"]
+        }
+    }, {
         name: "AutoRepair.peopleList",
         url: "/peopleList",
         templateUrl: "app/dev/views/peopleList/peopleList.html",

@@ -1,0 +1,19 @@
+.page-navi{
+    width: 300px;
+    margin: 0 auto;
+    font-size: 20px;
+}
+.page-navi a{
+    color: #333;
+    text-decoration: none;
+}
+.page-navi-item{
+    width: 60px;
+}
+.page-navi .active a{
+    color: rgb(236, 99, 44);
+}
+.page-navi li{
+    margin-left: 0px;
+    padding-right: 0px;
+}

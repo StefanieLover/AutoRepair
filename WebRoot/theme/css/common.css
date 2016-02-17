@@ -12,12 +12,15 @@
     padding: 5px 0;
     background-color: #584b4f;
     color: #efeae1;
-    font-size: 16px;
-    height: 48px;
+    font-size: 22px;
+    height: 60px;
 }
 .top-bar .navigation {
     display: inline-block;
     margin-left: 13%
+}
+.navigation .active a{
+    color: #81c08b;
 }
 .top-bar .wrapper{
     margin: 12px auto;
@@ -30,9 +33,11 @@ li {
     margin-left: 20px;
     cursor: pointer;
 }
+a{
+    text-decoration: none;
+}
 .top-bar a {
     color: #efeae1;
-    text-decoration: none;
 }
 .top-bar a:hover {
     color: #81c08b;
@@ -43,4 +48,8 @@ li {
 }
 a:active{
     color: #81c08b;
+}
+.main-page{
+    margin: 20px auto;
+    width: 90%;
 }
