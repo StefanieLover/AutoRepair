@@ -5,5 +5,15 @@
   "finance": "Finance",
   "peopleList": "People List",
   "customer": "Customer",
-  "supplier": "Supplier"
+  "supplier": "Supplier",
+  "add_customer": "Add Customer",
+  "name": "Name:",
+  "carNumber": "Car Number:",
+  "phoneNumber": "Phone Number:",
+  "carType": "Car Type:",
+  "input_name": "Please Enter Name",
+  "input_carNumber": "Please Enter CarNumber",
+  "input_phoneNumber": "Please Enter phoneNumber",
+  "input_carType": "Please Enter carType",
+  "save": "Save"
 }

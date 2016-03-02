@@ -1,19 +1,58 @@
 .page-navi{
-    width: 300px;
-    margin: 0 auto;
+    margin: 20px auto 0;
     font-size: 20px;
+    padding: 0;
+    margin: 5px 20px;
+    border-bottom: 1px solid #ccc;
 }
 .page-navi a{
     color: #333;
     text-decoration: none;
 }
 .page-navi-item{
-    width: 60px;
+    margin-left: 20px;
 }
 .page-navi .active a{
     color: rgb(236, 99, 44);
 }
-.page-navi li{
-    margin-left: 0px;
-    padding-right: 0px;
+.page-navi .page-tile{
+    margin: 0 auto;
+    width: 300px;
+}
+.people-main{
+    position: relative;
+}
+.people-main .add-people-btn{
+    position: absolute;
+    width: 110px;
+    height: 30px;
+    font-size: 20px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    background-color: #00b38a;
+    text-align: center;
+    right: 20px;
+    cursor: pointer;
+    padding-top: 2px;
+}
+.people-main .add-column{
+    margin-top: 15px;
+}
+.people-main .add-people{
+    padding: 0 15%;
+    padding-top: 25px;
+    background-color: #fefef2;
+}
+.people-main .people-save{
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    margin: 20px auto;
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+    border-color: #00b38a;
+    background-color: #00b38a;
+    cursor: pointer;
 }

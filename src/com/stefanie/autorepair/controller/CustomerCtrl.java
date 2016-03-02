@@ -13,8 +13,8 @@ import com.stefanie.autorepair.model.entity.Customer;
 public class CustomerCtrl {
 	
 	@ResponseBody
-	@RequestMapping("saveRepairSheet")
-	public Object saveRepairSheet(HttpServletRequest request){
+	@RequestMapping("saveOrUpdateCustomer")
+	public Object saveOrUpdateCustomer(HttpServletRequest request){
 		return Customer.saveOrUpdate(request);
 	}
 }

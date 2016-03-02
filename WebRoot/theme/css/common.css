@@ -50,6 +50,30 @@ a:active{
     color: #81c08b;
 }
 .main-page{
-    margin: 20px auto;
-    width: 90%;
+    margin: 0 auto;
+    width: 80%;
+    border: 1px solid #ccc;
+    min-height: 800px;
+    background-color:white;
+}
+.body-main{
+    background-color: rgb(241, 239, 239);
+}
+.label-common{
+    width: 10%;
+    font-size: 20px;
+    height: 25px;
+    line-height: 25px;
+    display: inline-block;
+}
+.btn-common{
+    width: 25%;
+    height: 24px;
+    display: inline-block;
+}
+.left-10{
+    margin-left: 10%;
+}
+.required:after{
+
 }

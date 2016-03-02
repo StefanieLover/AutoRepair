@@ -5,5 +5,15 @@
   "finance": "财务",
   "peopleList": "人员维护",
   "customer": "客户",
-  "supplier": "供应商"
+  "supplier": "供应商",
+  "add_customer": "添加客户",
+  "name": "名称:",
+  "carNumber": "车牌号:",
+  "phoneNumber": "电话:",
+  "carType": "车型:",
+  "input_name": "请输入名称",
+  "input_carNumber": "请输入车牌号",
+  "input_phoneNumber": "请输入电话",
+  "input_carType": "请输入车型",
+  "save": "保存"
 }

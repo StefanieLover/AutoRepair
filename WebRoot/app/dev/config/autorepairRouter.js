@@ -50,7 +50,8 @@ define(["lazyload"], function (lazyloadModule) {
         templateUrl: "app/dev/views/peopleList/peopleList.html",
         controller: 'peopleListCtrl',
         scripts: {
-            controllers: ["app/dev/controllers/peopleList/peopleListCtrl"]
+            controllers: ["app/dev/controllers/peopleList/peopleListCtrl"],
+            services: ['app/dev/services/peopleList/peopleService']
         }
     }, {
         name: "AutoRepair.peopleList.customer",

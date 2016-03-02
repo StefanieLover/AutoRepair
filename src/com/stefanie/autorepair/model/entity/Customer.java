@@ -70,7 +70,7 @@ public class Customer implements Serializable{
 		String carCardNumber = request.getParameter("carCardNumber");
 		String carType = request.getParameter("carType");
 		String phoneNumber = request.getParameter("phoneNumber");
-		Integer intId = Integer.parseInt(id);
+		Integer intId = (id == null) ? 0 : Integer.parseInt(id);
 		CommonDao commonDao = (CommonDao)ApplicationContextBean.getBean("commonDao");
 		/** 有待评估是否需要 
 		existCustomer = getCustomerById(commonDao, intId);
@@ -95,6 +95,7 @@ public class Customer implements Serializable{
 			return json;
 		}
 		json.put("status", "success");
+		json.put("code", "CT_003");
 		return json;
 	}
 	
