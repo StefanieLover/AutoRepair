@@ -1,12 +1,14 @@
 <div class="main-page">
     <ul class="page-navi">
         <div class="page-tile">
-            <li class="page-navi-item" ui-sref-active="active">
-                <a ui-sref="AutoRepair.peopleList.customer"  ng-bind="'customer' | translate"></a>
-            </li>
-            <li class="page-navi-item" ui-sref-active="active">
-                <a ui-sref="AutoRepair.peopleList.supplier" ng-bind="'supplier' | translate"></a>
-            </li>
+            <div style="text-align: center;">
+                <li class="page-navi-item" ui-sref-active="active">
+                    <a ui-sref="AutoRepair.peopleList.customer"  ng-bind="'customer' | translate"></a>
+                </li>
+                <li class="page-navi-item" ui-sref-active="active">
+                    <a ui-sref="AutoRepair.peopleList.supplier" ng-bind="'supplier' | translate"></a>
+                </li>
+            </div>
         </div>
     </ul>
     <div ui-view=""></div>

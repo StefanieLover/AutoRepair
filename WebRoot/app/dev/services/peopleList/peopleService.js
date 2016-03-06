@@ -4,6 +4,9 @@ define([], function(){
         return {
             saveOrUpdateCustomer: function (params) {
                 return HttpService.post('/customer/saveOrUpdateCustomer', params);
+            },
+            getCustomerList: function(){
+                return HttpService.post('/customer/getCustomerList');
             }
         }
     }];

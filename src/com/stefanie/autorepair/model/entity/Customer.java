@@ -1,6 +1,8 @@
 package com.stefanie.autorepair.model.entity;
 
 import java.io.Serializable;
+import java.util.HashMap;
+import java.util.Map;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -11,6 +13,7 @@ import javax.persistence.Table;
 import javax.servlet.http.HttpServletRequest;
 
 import org.apache.log4j.Logger;
+import org.hibernate.type.NullableType;
 import org.json.simple.JSONObject;
 import org.springframework.dao.DataAccessException;
 
@@ -99,11 +102,19 @@ public class Customer implements Serializable{
 		return json;
 	}
 	
+	public static Object getCustomerList(){
+		CommonDao commonDao = (CommonDao)ApplicationContextBean.getBean("commonDao");
+		String sql = "select * from t_customer";
+		Map<String, NullableType> scalars = new HashMap<String, NullableType>();
+		Object object = commonDao.querySqlToList(sql, scalars, 0, 10, null);
+		return object;
+	}
+	
 	public static Customer getCustomerById(CommonDao commonDao, Integer id){
 		if(null == id || id == 0){
 			return null;
 		}
 		return commonDao.getHibernateTemplate().get(Customer.class, id);
 	}
-	
+
 }

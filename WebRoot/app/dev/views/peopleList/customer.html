@@ -1,6 +1,6 @@
 <div class="people-main">
-    <div class="add-people-btn" ng-bind="'add_customer' | translate"></div>
-    <div class="add-people">
+    <div class="add-people-btn" ng-click="showAddCustom=!showAddCustom" ng-bind="'add_customer' | translate"></div>
+    <div class="add-people" ng-show="showAddCustom">
         <div class="add-column">
             <div class="label-common" ng-bind="'name' | translate"></div>
             <input type="text" class="form-control btn-common" ng-model="customer.name"
@@ -18,5 +18,26 @@
                    placeholder="{{'input_carType' | translate}}" required>
         </div>
         <div class="people-save" ng-click="saveOrUpdateCustomer()" ng-bind="'save' | translate"></div>
+    </div>
+    <div class="people-list">
+        <table class="table table-condensed">
+            <caption ng-bind="'custom_list' | translate"></caption>
+            <thead>
+                <tr>
+                    <th ng-bind="'name' | translate"></th>
+                    <th ng-bind="'carNumber' | translate"></th>
+                    <th ng-bind="'phoneNumber' | translate"></th>
+                    <th ng-bind="'carType' | translate"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in customers">
+                    <td ng-bind="item.name"></td>
+                    <td ng-bind="item.carCardNumber"></td>
+                    <td ng-bind="item.phoneNumber"></td>
+                    <td ng-bind="item.carType"></td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </div>

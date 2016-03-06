@@ -17,4 +17,9 @@ public class CustomerCtrl {
 	public Object saveOrUpdateCustomer(HttpServletRequest request){
 		return Customer.saveOrUpdate(request);
 	}
+	@ResponseBody
+	@RequestMapping("getCustomerList")
+	public Object getCustomerList(HttpServletRequest request){
+		return Customer.getCustomerList();
+	}
 }

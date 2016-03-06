@@ -15,5 +15,6 @@
   "input_carNumber": "Please Enter CarNumber",
   "input_phoneNumber": "Please Enter phoneNumber",
   "input_carType": "Please Enter carType",
-  "save": "Save"
+  "save": "Save",
+  "custom_list": "Custom List"
 }

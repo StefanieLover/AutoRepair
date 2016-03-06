@@ -77,3 +77,15 @@ a:active{
 .required:after{
 
 }
+caption{
+    text-align: center;
+    font-size: 25px;
+    color: rgb(51, 51, 51);
+}
+th{
+    text-align: center;
+    font-size: 18px;
+}
+tr{
+    text-align: center;
+}
