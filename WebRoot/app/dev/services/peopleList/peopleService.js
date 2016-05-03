@@ -6,7 +6,7 @@ define([], function(){
                 return HttpService.post('/customer/saveOrUpdateCustomer', params);
             },
             getCustomerList: function(){
-                return HttpService.post('/customer/getCustomerList');
+                return HttpService.get('/customer/getCustomerList');
             }
         }
     }];

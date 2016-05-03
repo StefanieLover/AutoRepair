@@ -102,6 +102,7 @@ public class Customer implements Serializable{
 		return json;
 	}
 	
+	@SuppressWarnings("deprecation")
 	public static Object getCustomerList(){
 		CommonDao commonDao = (CommonDao)ApplicationContextBean.getBean("commonDao");
 		String sql = "select * from t_customer";

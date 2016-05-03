@@ -57,17 +57,17 @@ define(["lazyload"], function (lazyloadModule) {
         name: "AutoRepair.peopleList.customer",
         url: "/customer",
         templateUrl: "app/dev/views/peopleList/customer.html",
-        controller: 'peopleListCtrl',
+        controller: 'customerCtrl',
         scripts: {
-            controllers: ["app/dev/controllers/peopleList/peopleListCtrl"]
+            controllers: ["app/dev/controllers/peopleList/customerCtrl"]
         }
     }, {
         name: "AutoRepair.peopleList.supplier",
         url: "/supplier",
         templateUrl: "app/dev/views/peopleList/supplier.html",
-        controller: 'peopleListCtrl',
+        controller: 'supplierCtrl',
         scripts: {
-            controllers: ["app/dev/controllers/peopleList/peopleListCtrl"]
+            controllers: ["app/dev/controllers/peopleList/supplierCtrl"]
         }
     }, {
         name: "AutoRepair.other",
