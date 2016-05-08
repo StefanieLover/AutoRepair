@@ -4,11 +4,10 @@
 define(["angular",
     "i18nService",
     "ui-router",
-    "fmRouter",
     "debRouter",
-    "app/framework/service/HttpService"], function (angular, i18nService, router, fmRouter, debRouter, HttpService) {
+    "app/framework/service/HttpService"], function (angular, i18nService, router, debRouter, HttpService) {
     "use strict";
-    var dependence = ['pascalprecht.translate', 'ngCookies', 'ui.router', fmRouter.name, debRouter.name];
+    var dependence = ['pascalprecht.translate', 'ngCookies', 'ui.router', debRouter.name];
     var app = angular.module('autoRepair', dependence);
     window.MODULE_NAME = debRouter.name;
     app.service('i18nService', i18nService);

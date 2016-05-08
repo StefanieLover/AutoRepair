@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <base href="/AutoRepair/"/>
+    <base href="/"/>
 <meta charset="UTF-8">
 <title>AutoRepair</title>
     <link rel="shortcut icon" href="theme/images/favicon.ico" type="image/x-icon" />
@@ -18,8 +18,8 @@
 </head>
 <body class="body" ng-controller="MainController">
     <!--header-->
-    <div ui-view="header"></div>
+    <div ng-include="url.header"></div>
     <!--body-->
-    <div class="body-main" ui-view="body"></div>
+    <div class="body-main" ui-view></div>
 </body>
 </html>

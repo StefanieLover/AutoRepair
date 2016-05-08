@@ -4,7 +4,7 @@ define([], function () {
         var sender = function (url, config, params) {
             return $q(function (resolve, reject) {
                 var cfg = $.extend({
-                    url: 'http://127.0.0.1:8080/AutoRepair' + url,
+                    url: 'http://10.0.141.248:8080' + url,
                     type: 'POST',
                     timeout: 30000,
                     headers: {},

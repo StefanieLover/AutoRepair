@@ -1,18 +1,13 @@
 define(["lazyload"], function (lazyloadModule) {
     "use strict";
     var configArr = [{
-        name: "AutoRepair",
-        url: "/AutoRepair",
-        views: {
-            header: {
-                templateUrl: 'app/framework/views/head.html'
-            },
-            body: {
-                template: '<div ui-view></div>'
-            }
-        }
+        name: "init",
+        url: "/",
+        controller: ['$state', function ($state) {
+            $state.go('home', {});
+        }]
     }, {
-        name: "AutoRepair.home",
+        name: "home",
         url: "/home",
         templateUrl: "app/dev/views/test.html",
         controller: 'homeCtrl',
@@ -21,7 +16,7 @@ define(["lazyload"], function (lazyloadModule) {
             services: ['app/dev/services/home/homeService']
         }
     }, {
-        name: "AutoRepair.repairSheet",
+        name: "repairSheet",
         url: "/repairSheet",
         templateUrl: "app/dev/views/repairSheet/repairSheet.html",
         controller: 'repairSheetCtrl',
@@ -29,7 +24,7 @@ define(["lazyload"], function (lazyloadModule) {
             controllers: ["app/dev/controllers/repairSheet/repairSheetCtrl"]
         }
     }, {
-        name: "AutoRepair.storageMange",
+        name: "storageMange",
         url: "/storageMange",
         templateUrl: "app/dev/views/storageManage/storageManage.html",
         controller: 'storageManageCtrl',
@@ -37,7 +32,7 @@ define(["lazyload"], function (lazyloadModule) {
             controllers: ["app/dev/controllers/storageManage/storageManageCtrl"]
         }
     }, {
-        name: "AutoRepair.finance",
+        name: "finance",
         url: "/finance",
         templateUrl: "app/dev/views/finance/finance.html",
         controller: 'financeCtrl',
@@ -45,7 +40,7 @@ define(["lazyload"], function (lazyloadModule) {
             controllers: ["app/dev/controllers/finance/financeCtrl"]
         }
     }, {
-        name: "AutoRepair.peopleList",
+        name: "peopleList",
         url: "/peopleList",
         templateUrl: "app/dev/views/peopleList/peopleList.html",
         controller: 'peopleListCtrl',
@@ -54,7 +49,7 @@ define(["lazyload"], function (lazyloadModule) {
             services: ['app/dev/services/peopleList/peopleService']
         }
     }, {
-        name: "AutoRepair.peopleList.customer",
+        name: "peopleList.customer",
         url: "/customer",
         templateUrl: "app/dev/views/peopleList/customer.html",
         controller: 'customerCtrl',
@@ -62,7 +57,7 @@ define(["lazyload"], function (lazyloadModule) {
             controllers: ["app/dev/controllers/peopleList/customerCtrl"]
         }
     }, {
-        name: "AutoRepair.peopleList.supplier",
+        name: "peopleList.supplier",
         url: "/supplier",
         templateUrl: "app/dev/views/peopleList/supplier.html",
         controller: 'supplierCtrl',
@@ -70,12 +65,15 @@ define(["lazyload"], function (lazyloadModule) {
             controllers: ["app/dev/controllers/peopleList/supplierCtrl"]
         }
     }, {
-        name: "AutoRepair.other",
+        name: "other",
         url: "/other",
         templateUrl: "app/dev/views/test.html"
     }];
     var devModule = angular.module("devModule", []);
     devModule = lazyloadModule.makeLazy(devModule);
     devModule.stateConfig({stateConfig: configArr});
+    devModule.config(['$urlRouterProvider', function ($urlRouterProvider) {
+        $urlRouterProvider.otherwise("/home");
+    }]);
     return devModule;
 });

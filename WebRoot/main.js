@@ -10,7 +10,6 @@ require.config({
         "static-file":"js/angularjs/angular-translate-loader-static-files.min",
         "i18nService":"app/i18n/i18nService",
         "lazyload":"js/lazyload/lazyload",
-        "fmRouter":"app/framework/framworkRouter",
         "debRouter":"app/dev/config/autorepairRouter"
     },
     //这个配置是你在引入依赖的时候的包名
