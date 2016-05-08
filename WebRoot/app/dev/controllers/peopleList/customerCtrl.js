@@ -1,6 +1,6 @@
 define([], function () {
     "use strict";
-    var config = ["$scope", "peopleService", "$state", function ($scope, peopleService, $state) {
+    var config = ["$scope", "peopleService", function ($scope, peopleService) {
         $scope.customer={};
         $scope.showAddCustom = false;
         $scope.saveOrUpdateCustomer = function () {

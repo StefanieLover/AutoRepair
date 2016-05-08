@@ -12,7 +12,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "t_supplier")
+@Table(name = "t_instoragesheetEntity")
 public class InStorageSheetEntity implements Serializable{
 
 	/**

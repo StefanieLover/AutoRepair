@@ -10,7 +10,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import javax.servlet.http.HttpServletRequest;
 
 import org.apache.log4j.Logger;
 import org.hibernate.type.NullableType;
@@ -20,6 +19,7 @@ import org.springframework.dao.DataAccessException;
 import com.stefanie.autorepair.model.ApplicationContextBean;
 import com.stefanie.autorepair.model.dao.CommonDao;
 
+@SuppressWarnings("deprecation")
 @Entity
 @Table(name = "t_customer")
 public class Customer implements Serializable{
@@ -66,13 +66,8 @@ public class Customer implements Serializable{
 	}
 	
 	@SuppressWarnings("unchecked")
-	public static JSONObject saveOrUpdate(HttpServletRequest request){
+	public static JSONObject saveOrUpdate(String id, String name, String carCardNumber, String carType, String phoneNumber){
 		JSONObject json = new JSONObject();
-		String id = request.getParameter("id");
-		String name = request.getParameter("name");
-		String carCardNumber = request.getParameter("carCardNumber");
-		String carType = request.getParameter("carType");
-		String phoneNumber = request.getParameter("phoneNumber");
 		Integer intId = (id == null) ? 0 : Integer.parseInt(id);
 		CommonDao commonDao = (CommonDao)ApplicationContextBean.getBean("commonDao");
 		/** 有待评估是否需要 
@@ -102,12 +97,11 @@ public class Customer implements Serializable{
 		return json;
 	}
 	
-	@SuppressWarnings("deprecation")
 	public static Object getCustomerList(){
 		CommonDao commonDao = (CommonDao)ApplicationContextBean.getBean("commonDao");
 		String sql = "select * from t_customer";
 		Map<String, NullableType> scalars = new HashMap<String, NullableType>();
-		Object object = commonDao.querySqlToList(sql, scalars, 0, 10, null);
+		Object object = commonDao.querySqlToList(sql, scalars, 0, 10, new Object[]{});
 		return object;
 	}
 	

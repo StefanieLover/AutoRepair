@@ -1,3 +1,31 @@
-<p>
-    This is Supplier Page!
-</p>
+<div class="people-main">
+    <div class="add-btn" style="width: 130px;" ng-click="showAddSupplier=!showAddSupplier" ng-bind="'add_supplier' | translate"></div>
+    <div class="add-people" ng-show="showAddSupplier">
+        <div class="add-column">
+            <div class="label-common" ng-bind="'name' | translate"></div>
+            <input type="text" class="form-control btn-common" ng-model="supplier.name"
+                   placeholder="{{'input_name' | translate}}" required>
+            <div class="label-common" ng-bind="'phoneNumber' | translate"></div>
+            <input type="text" class="form-control btn-common" ng-model="supplier.phoneNumber"
+                   placeholder="{{'input_phoneNumber' | translate}}" required>
+        </div>
+        <div class="people-save" ng-click="saveOrUpdateSupplier()" ng-bind="'save' | translate"></div>
+    </div>
+    <div class="people-list">
+        <table class="table table-condensed">
+            <caption ng-bind="'supplier_list' | translate"></caption>
+            <thead>
+            <tr>
+                <th ng-bind="'name' | translate"></th>
+                <th ng-bind="'phoneNumber' | translate"></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="item in suppliers">
+                <td ng-bind="item.name"></td>
+                <td ng-bind="item.phoneNumber"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

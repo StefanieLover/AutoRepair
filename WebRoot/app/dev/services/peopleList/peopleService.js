@@ -7,6 +7,12 @@ define([], function(){
             },
             getCustomerList: function(){
                 return HttpService.get('/customer/getCustomerList');
+            },
+            saveOrUpdateSupplier: function (params) {
+                return HttpService.post('/supplier/saveOrUpdateSupplier', params);
+            },
+            getSupplierList: function(){
+                return HttpService.get('/supplier/getSupplierList');
             }
         }
     }];

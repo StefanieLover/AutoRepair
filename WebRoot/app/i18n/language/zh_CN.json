@@ -16,5 +16,7 @@
   "input_phoneNumber": "请输入电话",
   "input_carType": "请输入车型",
   "save": "保存",
-  "custom_list": "客户列表"
+  "custom_list": "客户列表",
+  "add_supplier":"添加供应商",
+  "supplier_list": "供应商列表"
 }
